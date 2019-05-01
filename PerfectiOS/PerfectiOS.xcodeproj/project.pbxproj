@@ -7,19 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DDB713A7288973F735136FEB /* Pods_PerfectiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B7AF29B30123CDB2616A20 /* Pods_PerfectiOS.framework */; };
 		F1C0911E22787FD8003236CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0911D22787FD8003236CF /* AppDelegate.swift */; };
 		F1C0912022787FD8003236CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0911F22787FD8003236CF /* ViewController.swift */; };
 		F1C0912522787FD9003236CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1C0912422787FD9003236CF /* Assets.xcassets */; };
 		F1C0912822787FD9003236CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1C0912622787FD9003236CF /* LaunchScreen.storyboard */; };
+		FA24B40E227979D60008E425 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24B40D227979D60008E425 /* Constants.swift */; };
+		FA24B42222798FEE0008E425 /* RandomAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24B42022798FEE0008E425 /* RandomAPI.swift */; };
+		FA24B42322798FEE0008E425 /* RandomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24B42122798FEE0008E425 /* RandomService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AA7AA0042E9E8C5EA8FD111 /* Pods-PerfectiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerfectiOS.release.xcconfig"; path = "Target Support Files/Pods-PerfectiOS/Pods-PerfectiOS.release.xcconfig"; sourceTree = "<group>"; };
+		72B7AF29B30123CDB2616A20 /* Pods_PerfectiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PerfectiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C25B34A041E86C027006FACE /* Pods-PerfectiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerfectiOS.debug.xcconfig"; path = "Target Support Files/Pods-PerfectiOS/Pods-PerfectiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F1C0911A22787FD8003236CF /* PerfectiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerfectiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C0911D22787FD8003236CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1C0911F22787FD8003236CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F1C0912422787FD9003236CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1C0912722787FD9003236CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1C0912922787FD9003236CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA24B40D227979D60008E425 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FA24B42022798FEE0008E425 /* RandomAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAPI.swift; sourceTree = "<group>"; };
+		FA24B42122798FEE0008E425 /* RandomService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDB713A7288973F735136FEB /* Pods_PerfectiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E981CE457F68700C07B3289 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72B7AF29B30123CDB2616A20 /* Pods_PerfectiOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		64EDC91BE049BDC5502DCEE1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C25B34A041E86C027006FACE /* Pods-PerfectiOS.debug.xcconfig */,
+				0AA7AA0042E9E8C5EA8FD111 /* Pods-PerfectiOS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F1C0911122787FD8003236CF = {
 			isa = PBXGroup;
 			children = (
 				F1C0911C22787FD8003236CF /* PerfectiOS */,
 				F1C0911B22787FD8003236CF /* Products */,
+				64EDC91BE049BDC5502DCEE1 /* Pods */,
+				1E981CE457F68700C07B3289 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,7 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				F1C0911D22787FD8003236CF /* AppDelegate.swift */,
+				FA24B40C2279789B0008E425 /* Common */,
 				F1C0912F22788011003236CF /* Screens */,
+				FA24B40F22797D8E0008E425 /* Services */,
 				F1C0912422787FD9003236CF /* Assets.xcassets */,
 				F1C0912622787FD9003236CF /* LaunchScreen.storyboard */,
 				F1C0912922787FD9003236CF /* Info.plist */,
@@ -69,6 +102,23 @@
 			path = Screens;
 			sourceTree = "<group>";
 		};
+		FA24B40C2279789B0008E425 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FA24B40D227979D60008E425 /* Constants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FA24B40F22797D8E0008E425 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA24B42022798FEE0008E425 /* RandomAPI.swift */,
+				FA24B42122798FEE0008E425 /* RandomService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -76,9 +126,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F1C0912C22787FD9003236CF /* Build configuration list for PBXNativeTarget "PerfectiOS" */;
 			buildPhases = (
+				9A9CCE681D8EB058B52253DB /* [CP] Check Pods Manifest.lock */,
 				F1C0911622787FD8003236CF /* Sources */,
 				F1C0911722787FD8003236CF /* Frameworks */,
 				F1C0911822787FD8003236CF /* Resources */,
+				731846A88F86670DFF5704D0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,13 +186,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		731846A88F86670DFF5704D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PerfectiOS/Pods-PerfectiOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PerfectiOS/Pods-PerfectiOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A9CCE681D8EB058B52253DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PerfectiOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F1C0911622787FD8003236CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F1C0912022787FD8003236CF /* ViewController.swift in Sources */,
+				FA24B42222798FEE0008E425 /* RandomAPI.swift in Sources */,
 				F1C0911E22787FD8003236CF /* AppDelegate.swift in Sources */,
+				FA24B40E227979D60008E425 /* Constants.swift in Sources */,
+				FA24B42322798FEE0008E425 /* RandomService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +386,7 @@
 		};
 		F1C0912D22787FD9003236CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C25B34A041E86C027006FACE /* Pods-PerfectiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -295,6 +406,7 @@
 		};
 		F1C0912E22787FD9003236CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AA7AA0042E9E8C5EA8FD111 /* Pods-PerfectiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
