@@ -9,13 +9,18 @@
 /* Begin PBXBuildFile section */
 		DDB713A7288973F735136FEB /* Pods_PerfectiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B7AF29B30123CDB2616A20 /* Pods_PerfectiOS.framework */; };
 		F1C0911E22787FD8003236CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0911D22787FD8003236CF /* AppDelegate.swift */; };
-		F1C0912022787FD8003236CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0911F22787FD8003236CF /* ViewController.swift */; };
+		F1C0912022787FD8003236CF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0911F22787FD8003236CF /* HomeViewController.swift */; };
 		F1C0912522787FD9003236CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1C0912422787FD9003236CF /* Assets.xcassets */; };
 		F1C0912822787FD9003236CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1C0912622787FD9003236CF /* LaunchScreen.storyboard */; };
 		FA24B40E227979D60008E425 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24B40D227979D60008E425 /* Constants.swift */; };
 		FA24B42222798FEE0008E425 /* RandomAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24B42022798FEE0008E425 /* RandomAPI.swift */; };
 		FA24B42322798FEE0008E425 /* RandomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24B42122798FEE0008E425 /* RandomService.swift */; };
 		FA24B4262279A97F0008E425 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24B4252279A97F0008E425 /* Person.swift */; };
+		FA24B4282279DB5E0008E425 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24B4272279DB5E0008E425 /* HomeViewModel.swift */; };
+		FA24B42B2279F4380008E425 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24B42A2279F4380008E425 /* PersonCell.swift */; };
+		FA24B42D2279F5190008E425 /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24B42C2279F5190008E425 /* Then.swift */; };
+		FA24B42F2279FAF60008E425 /* UsersCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24B42E2279FAF60008E425 /* UsersCollectionView.swift */; };
+		FA24B431227A09D00008E425 /* HomeViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24B430227A09D00008E425 /* HomeViewController+UI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +29,7 @@
 		C25B34A041E86C027006FACE /* Pods-PerfectiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerfectiOS.debug.xcconfig"; path = "Target Support Files/Pods-PerfectiOS/Pods-PerfectiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F1C0911A22787FD8003236CF /* PerfectiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerfectiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C0911D22787FD8003236CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F1C0911F22787FD8003236CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F1C0911F22787FD8003236CF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F1C0912422787FD9003236CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1C0912722787FD9003236CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1C0912922787FD9003236CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -32,6 +37,11 @@
 		FA24B42022798FEE0008E425 /* RandomAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAPI.swift; sourceTree = "<group>"; };
 		FA24B42122798FEE0008E425 /* RandomService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomService.swift; sourceTree = "<group>"; };
 		FA24B4252279A97F0008E425 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		FA24B4272279DB5E0008E425 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		FA24B42A2279F4380008E425 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		FA24B42C2279F5190008E425 /* Then.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
+		FA24B42E2279FAF60008E425 /* UsersCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersCollectionView.swift; sourceTree = "<group>"; };
+		FA24B430227A09D00008E425 /* HomeViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+UI.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +109,9 @@
 		F1C0912F22788011003236CF /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				F1C0911F22787FD8003236CF /* ViewController.swift */,
+				F1C0911F22787FD8003236CF /* HomeViewController.swift */,
+				FA24B430227A09D00008E425 /* HomeViewController+UI.swift */,
+				FA24B4272279DB5E0008E425 /* HomeViewModel.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -107,7 +119,9 @@
 		FA24B40C2279789B0008E425 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				FA24B4292279F4250008E425 /* Components */,
 				FA24B40D227979D60008E425 /* Constants.swift */,
+				FA24B42C2279F5190008E425 /* Then.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -127,6 +141,15 @@
 				FA24B4252279A97F0008E425 /* Person.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FA24B4292279F4250008E425 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FA24B42A2279F4380008E425 /* PersonCell.swift */,
+				FA24B42E2279FAF60008E425 /* UsersCollectionView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +230,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PerfectiOS/Pods-PerfectiOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -217,6 +241,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -257,7 +282,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA24B4262279A97F0008E425 /* Person.swift in Sources */,
-				F1C0912022787FD8003236CF /* ViewController.swift in Sources */,
+				FA24B431227A09D00008E425 /* HomeViewController+UI.swift in Sources */,
+				FA24B42D2279F5190008E425 /* Then.swift in Sources */,
+				F1C0912022787FD8003236CF /* HomeViewController.swift in Sources */,
+				FA24B42F2279FAF60008E425 /* UsersCollectionView.swift in Sources */,
+				FA24B42B2279F4380008E425 /* PersonCell.swift in Sources */,
+				FA24B4282279DB5E0008E425 /* HomeViewModel.swift in Sources */,
 				FA24B42222798FEE0008E425 /* RandomAPI.swift in Sources */,
 				F1C0911E22787FD8003236CF /* AppDelegate.swift in Sources */,
 				FA24B40E227979D60008E425 /* Constants.swift in Sources */,

@@ -16,12 +16,11 @@ enum Constants {
     }
 
     enum Colors {
-        static let backgroundColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
+        static let backgroundColor = #colorLiteral(red: 0.3293711543, green: 0.3294345438, blue: 0.3293717802, alpha: 1)
         static let textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     }
     
 }
-
 
 func printError(with item: Any...) {
     print("\n❌ error: ", item)

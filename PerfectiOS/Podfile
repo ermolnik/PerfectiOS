@@ -9,5 +9,6 @@ target 'PerfectiOS' do
   pod 'Moya'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'Kingfisher'
 
 end

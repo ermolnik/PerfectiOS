@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  PerfectiOS
 //
 //  Created by Кирилл Худяков on 30/04/2019.
@@ -8,8 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+extension UILabel: Then {}
 
+class HomeViewController: UIViewController {
+
+    var ui: UI!
+    var userCollectionView: UsersCollectionView = UsersCollectionView()
+    var viewModel: HomeViewModel = HomeViewModel()
+    
+    
     override func loadView() {
         super.loadView()
         view.backgroundColor = .green
@@ -18,13 +25,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewModel.loadData()
         
-        RandomService().getGirls() { girls in
-            print(girls)
-            
-        }
+        addUI()
+        setupConstraints()
     }
 
-
+    
 }
-

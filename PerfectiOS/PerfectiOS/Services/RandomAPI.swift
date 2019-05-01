@@ -41,9 +41,9 @@ extension RandomAPI: TargetType {
     }
     var task: Task {
         switch self {
-        case .getGirls:
+        case .getGirls(let count):
             return .requestParameters(parameters: [
-                "results": 2,
+                "results": count,
                 "gender":"female"
                 ], encoding: URLEncoding.default)
         case .getUsers:

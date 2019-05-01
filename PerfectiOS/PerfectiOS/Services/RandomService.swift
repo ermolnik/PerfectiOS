@@ -21,25 +21,23 @@ func jsonItem(item: Any) -> [String: AnyObject] {
 */
 class RandomService: MoyaProvider<RandomAPI>{
     
-        func getGirls(onSuccess: @escaping ([String])->Void) {
-            request(.getGirls(2)) { result in
+        func getGirls(onSuccess: @escaping ([Person])->Void) {
+            request(.getGirls(8)) { result in
                 switch result {
                 case .success(let response):
                     do {
                         if let mapJson = try response.mapJSON(failsOnEmptyData: true) as? [String: AnyObject] {
-                            
-                            let x = jsonItem(item: mapJson)["results"]
-                            
-                            if let arrItems = x as? Array<AnyObject> {
+                            var persons: [Person] = []
+                            let results = jsonItem(item: mapJson)["results"]
+                            if let arrItems = results as? Array<AnyObject> {
                                 for item in arrItems {
-                                   if let girlPictureUrl = jsonItem(item: item)["picture"]?["large"] as? String {
-                                        print(girlPictureUrl)
-                                    }
+                                    let person = Person()
+                                    person.from(item: jsonItem(item: item))
+                                    persons.append(person)
                                 }
                             }
                             
-                            
-                            onSuccess([])
+                            onSuccess(persons)
                         }
                     } catch (let error) {
                         printError(with: error.localizedDescription)
