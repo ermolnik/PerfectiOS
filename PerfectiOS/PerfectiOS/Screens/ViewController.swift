@@ -18,6 +18,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        RandomService().getGirls() { girls in
+            print(girls)
+            
+        }
     }
 
 
