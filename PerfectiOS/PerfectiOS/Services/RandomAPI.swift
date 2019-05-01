@@ -10,43 +10,43 @@ import Moya
 
 
 enum RandomAPI {
-    case getEvents(Int)
-    case downloadImage(String)
+    case getUsers
+    case getGirls(Int)
 }
 
 extension RandomAPI: TargetType {
     var baseURL: URL {
         switch self {
-        case .downloadImage(let urlString):
-            return URL(fileURLWithPath: urlString)
         default:
-            return URL(string: ServerUrls.Dev.EVENTS )!
+            return URL(string: Constants.API.host )!
         }
     }
     
     var path: String {
         switch self {
-        case .getEvents(_):
-            return "/api/v1/events"
-        case .downloadImage(let urlString):
-            return urlString
+        case .getGirls:
+            fallthrough
+        case .getUsers:
+            return "/api"
         }
         
     }
     var method: Moya.Method {
         switch self {
-        case .getEvents(_):
+        case .getGirls:
             return .get
-        case .downloadImage(_):
+        case .getUsers:
             return .get
         }
     }
     var task: Task {
         switch self {
-        case .getEvents(let pageNumber):
-            return .requestParameters(parameters: ["page": pageNumber,
-                                                   "sort": "-created_at"], encoding: URLEncoding.default)
-        case .downloadImage(_):
+        case .getGirls:
+            return .requestParameters(parameters: [
+                "results": 2,
+                "gender":"female"
+                ], encoding: URLEncoding.default)
+        case .getUsers:
             return .requestPlain
         }
     }
@@ -57,15 +57,13 @@ extension RandomAPI: TargetType {
     
     var headers: [String: String]? {
         switch self {
-        case .getEvents(_):
+        case .getGirls:
+            fallthrough
+        case .getUsers:
             return [
                 "Content-type": "application/json",
                 "Accept": "application/json"
             ]
-        case .downloadImage(_):
-            return [
-                "Content-type": "image/jpeg",
-                ]
         }
     }
 }
