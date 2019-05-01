@@ -15,6 +15,7 @@
 		FA24B40E227979D60008E425 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24B40D227979D60008E425 /* Constants.swift */; };
 		FA24B42222798FEE0008E425 /* RandomAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24B42022798FEE0008E425 /* RandomAPI.swift */; };
 		FA24B42322798FEE0008E425 /* RandomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24B42122798FEE0008E425 /* RandomService.swift */; };
+		FA24B4262279A97F0008E425 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24B4252279A97F0008E425 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FA24B40D227979D60008E425 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FA24B42022798FEE0008E425 /* RandomAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAPI.swift; sourceTree = "<group>"; };
 		FA24B42122798FEE0008E425 /* RandomService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomService.swift; sourceTree = "<group>"; };
+		FA24B4252279A97F0008E425 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,6 @@
 				C25B34A041E86C027006FACE /* Pods-PerfectiOS.debug.xcconfig */,
 				0AA7AA0042E9E8C5EA8FD111 /* Pods-PerfectiOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -83,6 +84,7 @@
 		F1C0911C22787FD8003236CF /* PerfectiOS */ = {
 			isa = PBXGroup;
 			children = (
+				FA24B4242279A9690008E425 /* Models */,
 				F1C0911D22787FD8003236CF /* AppDelegate.swift */,
 				FA24B40C2279789B0008E425 /* Common */,
 				F1C0912F22788011003236CF /* Screens */,
@@ -117,6 +119,14 @@
 				FA24B42122798FEE0008E425 /* RandomService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		FA24B4242279A9690008E425 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA24B4252279A97F0008E425 /* Person.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA24B4262279A97F0008E425 /* Person.swift in Sources */,
 				F1C0912022787FD8003236CF /* ViewController.swift in Sources */,
 				FA24B42222798FEE0008E425 /* RandomAPI.swift in Sources */,
 				F1C0911E22787FD8003236CF /* AppDelegate.swift in Sources */,
@@ -389,9 +400,11 @@
 			baseConfigurationReference = C25B34A041E86C027006FACE /* Pods-PerfectiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RF42FG352F;
 				INFOPLIST_FILE = PerfectiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -399,7 +412,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.adeveloper.PerfectiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -409,9 +422,11 @@
 			baseConfigurationReference = 0AA7AA0042E9E8C5EA8FD111 /* Pods-PerfectiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RF42FG352F;
 				INFOPLIST_FILE = PerfectiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -419,7 +434,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.adeveloper.PerfectiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
