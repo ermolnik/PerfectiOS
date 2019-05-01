@@ -12,7 +12,7 @@ import UIKit
 enum Constants {
     
     enum API {
-        
+        static let host = "https://randomuser.me"
     }
 
     enum Colors {
