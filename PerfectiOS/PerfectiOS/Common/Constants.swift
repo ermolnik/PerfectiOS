@@ -21,3 +21,8 @@ enum Constants {
     }
     
 }
+
+
+func printError(with item: Any...) {
+    print("\n❌ error: ", item)
+}
