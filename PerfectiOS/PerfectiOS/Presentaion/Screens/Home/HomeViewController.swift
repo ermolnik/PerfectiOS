@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
     override func loadView() {
         super.loadView()
         view.backgroundColor = .green
+        
     }
     
     override func viewDidLoad() {
@@ -29,7 +30,17 @@ class HomeViewController: UIViewController {
         
         addUI()
         setupConstraints()
+        userCollectionView.collectionView.delegate = self
     }
 
-    
+}
+
+extension HomeViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("model selected ")
+        let person = viewModel.persons[indexPath.row]
+        let detailViewController = DetailViewController()
+        detailViewController.configure(with: person)
+        present(detailViewController, animated: true)
+    }
 }

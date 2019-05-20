@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 
 class Person {
@@ -34,5 +35,8 @@ extension Person {
         if let girlPictureUrl = item["picture"]?["large"] as? String {
             self.pictureUrl = girlPictureUrl
         }
+        
+        var imgView = UIImageView()
+        imgView.kf.setImage(with: )
     }
 }

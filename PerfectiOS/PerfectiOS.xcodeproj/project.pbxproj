@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		DDB713A7288973F735136FEB /* Pods_PerfectiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B7AF29B30123CDB2616A20 /* Pods_PerfectiOS.framework */; };
+		F164C413228D6FF100446809 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F164C412228D6FF100446809 /* DetailViewController.swift */; };
+		F164C417228D73AD00446809 /* PersonRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F164C416228D73AD00446809 /* PersonRemoteDataManager.swift */; };
+		F164C419228D779E00446809 /* AllProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F164C418228D779E00446809 /* AllProtocols.swift */; };
+		F164C41C228D838000446809 /* UIView+anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F164C41B228D838000446809 /* UIView+anchor.swift */; };
 		F1C0911E22787FD8003236CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0911D22787FD8003236CF /* AppDelegate.swift */; };
 		F1C0912022787FD8003236CF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0911F22787FD8003236CF /* HomeViewController.swift */; };
 		F1C0912522787FD9003236CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1C0912422787FD9003236CF /* Assets.xcassets */; };
@@ -27,6 +31,10 @@
 		0AA7AA0042E9E8C5EA8FD111 /* Pods-PerfectiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerfectiOS.release.xcconfig"; path = "Target Support Files/Pods-PerfectiOS/Pods-PerfectiOS.release.xcconfig"; sourceTree = "<group>"; };
 		72B7AF29B30123CDB2616A20 /* Pods_PerfectiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PerfectiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C25B34A041E86C027006FACE /* Pods-PerfectiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerfectiOS.debug.xcconfig"; path = "Target Support Files/Pods-PerfectiOS/Pods-PerfectiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		F164C412228D6FF100446809 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F164C416228D73AD00446809 /* PersonRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRemoteDataManager.swift; sourceTree = "<group>"; };
+		F164C418228D779E00446809 /* AllProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllProtocols.swift; sourceTree = "<group>"; };
+		F164C41B228D838000446809 /* UIView+anchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+anchor.swift"; sourceTree = "<group>"; };
 		F1C0911A22787FD8003236CF /* PerfectiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerfectiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C0911D22787FD8003236CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1C0911F22787FD8003236CF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +81,56 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F164C410228D6FB900446809 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F1C0911F22787FD8003236CF /* HomeViewController.swift */,
+				FA24B430227A09D00008E425 /* HomeViewController+UI.swift */,
+				FA24B4272279DB5E0008E425 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F164C411228D6FD100446809 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F164C412228D6FF100446809 /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		F164C414228D737000446809 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F164C415228D737A00446809 /* Managers */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F164C415228D737A00446809 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F164C416228D73AD00446809 /* PersonRemoteDataManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		F164C41A228D831700446809 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F164C41B228D838000446809 /* UIView+anchor.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F164C421228EEF4800446809 /* Presentaion */ = {
+			isa = PBXGroup;
+			children = (
+				F1C0912F22788011003236CF /* Screens */,
+			);
+			path = Presentaion;
+			sourceTree = "<group>";
+		};
 		F1C0911122787FD8003236CF = {
 			isa = PBXGroup;
 			children = (
@@ -94,10 +152,12 @@
 		F1C0911C22787FD8003236CF /* PerfectiOS */ = {
 			isa = PBXGroup;
 			children = (
+				F164C421228EEF4800446809 /* Presentaion */,
+				F164C414228D737000446809 /* Data */,
 				FA24B4242279A9690008E425 /* Models */,
 				F1C0911D22787FD8003236CF /* AppDelegate.swift */,
 				FA24B40C2279789B0008E425 /* Common */,
-				F1C0912F22788011003236CF /* Screens */,
+				F164C41A228D831700446809 /* Extensions */,
 				FA24B40F22797D8E0008E425 /* Services */,
 				F1C0912422787FD9003236CF /* Assets.xcassets */,
 				F1C0912622787FD9003236CF /* LaunchScreen.storyboard */,
@@ -109,9 +169,8 @@
 		F1C0912F22788011003236CF /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				F1C0911F22787FD8003236CF /* HomeViewController.swift */,
-				FA24B430227A09D00008E425 /* HomeViewController+UI.swift */,
-				FA24B4272279DB5E0008E425 /* HomeViewModel.swift */,
+				F164C411228D6FD100446809 /* Detail */,
+				F164C410228D6FB900446809 /* Home */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -122,6 +181,7 @@
 				FA24B4292279F4250008E425 /* Components */,
 				FA24B40D227979D60008E425 /* Constants.swift */,
 				FA24B42C2279F5190008E425 /* Then.swift */,
+				F164C418228D779E00446809 /* AllProtocols.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -281,9 +341,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F164C417228D73AD00446809 /* PersonRemoteDataManager.swift in Sources */,
+				F164C41C228D838000446809 /* UIView+anchor.swift in Sources */,
+				F164C419228D779E00446809 /* AllProtocols.swift in Sources */,
 				FA24B4262279A97F0008E425 /* Person.swift in Sources */,
 				FA24B431227A09D00008E425 /* HomeViewController+UI.swift in Sources */,
 				FA24B42D2279F5190008E425 /* Then.swift in Sources */,
+				F164C413228D6FF100446809 /* DetailViewController.swift in Sources */,
 				F1C0912022787FD8003236CF /* HomeViewController.swift in Sources */,
 				FA24B42F2279FAF60008E425 /* UsersCollectionView.swift in Sources */,
 				FA24B42B2279F4380008E425 /* PersonCell.swift in Sources */,

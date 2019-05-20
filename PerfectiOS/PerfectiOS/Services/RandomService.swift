@@ -16,12 +16,17 @@ func jsonItem(item: Any) -> [String: AnyObject] {
     return [:]
 }
 
+enum RandomServiceError: Error {
+    case common
+    case failed
+}
+
 /** RandomService Class
 
 */
 class RandomService: MoyaProvider<RandomAPI>{
     
-        func getGirls(onSuccess: @escaping ([Person])->Void) {
+    func getGirls(onError: @escaping (RandomServiceError)->Void = { _ in }, onSuccess: @escaping ([Person])->Void) {
             request(.getGirls(8)) { result in
                 switch result {
                 case .success(let response):
@@ -40,11 +45,13 @@ class RandomService: MoyaProvider<RandomAPI>{
                             onSuccess(persons)
                         }
                     } catch (let error) {
+                        onError(.common)
                         printError(with: error.localizedDescription)
                     }
                     
                     break
                 case .failure(let error):
+                    onError(.failed)
                     printError(with: "\(#function): \(error)")
                     break
                 }

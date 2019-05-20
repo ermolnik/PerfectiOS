@@ -16,7 +16,9 @@ class HomeViewModel: NSObject {
     
     func loadData() {
         
-        RandomService().getGirls() { girls in
+        RandomService().getGirls(onError: { error in
+            printError(with: "\(error.localizedDescription)")
+        }) { girls in
             self.persons = girls
             self.persons.forEach {
                 print($0)
@@ -59,5 +61,6 @@ extension HomeViewModel: UICollectionViewDataSource {
         return UICollectionViewCell()
     }
     
-    
 }
+
+
