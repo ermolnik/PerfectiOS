@@ -50,8 +50,8 @@ extension HomeViewModel: UICollectionViewDataSource {
             cell.imageView.layer.cornerRadius = PersonCell.height / 2
             cell.clipsToBounds = true
             
-            if let pictureUrl = person.pictureUrl {
-                cell.imageView.kf.setImage(with: URL(string: pictureUrl))
+            if let pictureLink = person.pictureLink {
+                cell.imageView.kf.setImage(with: URL(string: pictureLink))
                 
             } else {
                 cell.imageView.image = #imageLiteral(resourceName: "girlFace")

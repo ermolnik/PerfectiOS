@@ -30,23 +30,13 @@ class RandomService: MoyaProvider<RandomAPI>{
             request(.getGirls(8)) { result in
                 switch result {
                 case .success(let response):
-                    do {
-                        if let mapJson = try response.mapJSON(failsOnEmptyData: true) as? [String: AnyObject] {
-                            var persons: [Person] = []
-                            let results = jsonItem(item: mapJson)["results"]
-                            if let arrItems = results as? Array<AnyObject> {
-                                for item in arrItems {
-                                    let person = Person()
-                                    person.from(item: jsonItem(item: item))
-                                    persons.append(person)
-                                }
-                            }
-                            
-                            onSuccess(persons)
-                        }
-                    } catch (let error) {
+                    if let personsResponse = try? JSONDecoder()
+                            .decode(PersonsResponse.self,
+                                    from: response.data) {
+                            onSuccess(personsResponse.results)
+                    } else {
                         onError(.common)
-                        printError(with: error.localizedDescription)
+                        printError(with: "get girls error parsing")
                     }
                     
                     break

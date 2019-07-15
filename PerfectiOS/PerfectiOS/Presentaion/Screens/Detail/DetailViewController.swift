@@ -52,14 +52,14 @@ class DetailViewController: UIViewController {
     
     func configure(with person: Person) {
         self.person = person
-        nameLabel.text = person.name
+        nameLabel.text = person.fullName
         photoImageView.image = #imageLiteral(resourceName: "no-image")
         
         print(person)
         
         nameLabel.textColor = .white
-        if let pictureUrl = person.pictureUrl {
-            photoImageView.kf.setImage(with: URL(string: pictureUrl))
+        if let pictureLink = person.pictureLink {
+            photoImageView.kf.setImage(with: URL(string: pictureLink))
         }
         
         photoImageView.layer.cornerRadius = 8
