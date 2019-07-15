@@ -14,6 +14,9 @@ struct Person: Decodable {
     
     let name: Name?
     let gender: String?
+    let email: String?
+    let phone: String?
+    let cell: String?
     
     let photo: Data?
     let picture: Picture?
@@ -46,13 +49,6 @@ extension Person {
     }
 }
 
-
-//extension Person: CustomStringConvertible {
-//    var description: String {
-//        return "\nPerson: \(name ?? "none") \(pictureUrl ?? "none")"
-//    }
-//}
-
 extension Person {
     struct Name: Decodable {
         let title: String?
@@ -67,28 +63,16 @@ extension Person {
     }
 }
 
-
-//extension Person {
-//    func from(item: [String: AnyObject]) {
-//        print(item)
-//        if
-//            let firstName = item["name"]?["first"] as? String,
-//            let lastName = item["name"]?["last"] as? String
-//        {
-//            self.name = "\(firstName) \(lastName)"
-//        }
-//
-//        if let girlPictureUrl = item["picture"]?["large"] as? String {
-//            self.pictureUrl = girlPictureUrl
-//        }
-//
-//        var imgView = UIImageView()
-////        imgView.kf.setImage(with: <#T##Source?#>)
-//    }
-//}
-
 struct PersonsResponse: Decodable {
     let results: [Person]
+    let info: Info?
 }
 
-
+extension PersonsResponse {
+    struct Info: Decodable {
+        let seed: String?
+        let results: Int?
+        let page: Int?
+        let version: String?
+    }
+}
